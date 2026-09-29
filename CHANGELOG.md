@@ -12,7 +12,18 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
-## [Unreleased]
+## [0.0.3]
+
+The family's third release. Nothing in the language server changed; the
+version moves with passmcp, whose family manifest now lists passmcp-lsp
+as released.
+
+### Changed
+
+- **The VS Code extension builds with TypeScript 7.0** and the Node 26
+  type definitions. The VS Code API types stay at 1.91, the oldest VS
+  Code the extension supports, so `vsce` still packages it for the same
+  editors.
 
 ### Fixed
 
@@ -50,4 +61,5 @@ ships at the family's version, 0.0.2.
   signed checksums and SLSA provenance; `make install` with bash, zsh and
   fish completions.
 
+[0.0.3]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/sebastienrousseau/passmcp-lsp/commits/main
