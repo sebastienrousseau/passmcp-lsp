@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "platform baseline",
+  "description": "What we will route agent traffic to.",
+
+  "must_pass": ["net.tls", "auth.unauthenticated_tools"],
+  "must_not_fail": ["catalog.tools.descriptions"],
+
+  "max_fail": 0,
+  "max_warn": 5,
+  "min_score": 75,
+  "min_category_score": { "authorization": 90 },
+  "forbid_severity": "major",
+
+  "exemptions": [
+    {
+      "check": "perf.latency",
+      "reason": "This server calls a legacy mainframe; 900ms is the floor.",
+      "expires": "2099-06-30",
+      "ticket": "PLAT-2214"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+src/**
+test/**
+out/test/**
+tsconfig.json
+*.vsix
+node_modules/.bin/**

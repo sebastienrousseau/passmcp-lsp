@@ -1,0 +1,45 @@
+<!-- SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com> -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+
+# Changelog
+
+All notable changes to passmcp-lsp are documented here. The format follows
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions are
+[Semantic Versioning](https://semver.org/) shaped.
+
+**This repository carries passmcp's version.** It is in lockstep with
+[passmcp](https://github.com/sebastienrousseau/passmcp): every repository in
+the family carries one version, and a release here with nothing in it is the
+version rule working. The release script dates the heading below when 0.0.2
+is tagged.
+
+## [0.0.2] — Unreleased
+
+The first version. passmcp-lsp was never tagged at 0.0.1, so it first
+ships at the family's version, 0.0.2.
+
+### Added
+
+- **A language server for MCP artefacts**, over stdio: diagnostics on open
+  and on every change, whole or incremental, and hover.
+- **`server.json`** validated against the MCP Registry's 2025-12-11 schema,
+  embedded byte for byte, by a JSON Schema validator that refuses to load a
+  schema using a keyword it does not implement.
+- **MCP client configurations**: the `mcpServers` layout (Claude Desktop,
+  Claude Code, Cursor) and VS Code's `servers` layout, with comments and
+  trailing commas; a literal credential in `env` or `headers` is a warning.
+- **MCP tool definitions**, against the Tool rules of MCP 2025-11-25.
+- **passmcp policies**, with the rules passmcp 0.0.1 applies and its
+  reasons; a CI job holds them to passmcp's own verdicts.
+- **passmcp attestations**, verified offline by passmcp-reporting 0.0.1.
+- **Hover on check ids** in policies and attestations, with the guidance
+  the installed passmcp gives; without passmcp the hover says how to get it.
+- **`passmcp-lsp check`**, the same analysis from a terminal or CI, as text
+  or JSON, exiting 1 on any error.
+- **A VS Code extension** in `editors/vscode`, built into a `.vsix` in CI
+  and attached to each release, and a Neovim configuration.
+- Release archives for Linux, macOS and Windows on amd64 and arm64 with
+  signed checksums and SLSA provenance; `make install` with bash, zsh and
+  fish completions.
+
+[0.0.2]: https://github.com/sebastienrousseau/passmcp-lsp/commits/main

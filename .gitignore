@@ -1,0 +1,8 @@
+build/
+dist/
+coverage.out
+coverage.log
+public/
+node_modules/
+editors/vscode/out/
+editors/vscode/*.vsix
