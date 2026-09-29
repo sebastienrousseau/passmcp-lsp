@@ -1,0 +1,1 @@
+{"version": 1, "name": "old exemption", "exemptions": [{"check": "perf.latency", "reason": "legacy", "expires": "2020-01-31"}]}

@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+version: "2"
+linters:
+  default: standard
+  enable:
+    - revive
+    # The server parses whatever text an editor hands it and runs one
+    # program; it gets the security and correctness linters, not just the
+    # standard set.
+    - gosec
+    - bodyclose
+    - errorlint
+    - nilerr
+    - copyloopvar
+    - makezero
+    - noctx
+    # The portfolio's complexity ceilings per function (AGENTS.md §0):
+    # cyclomatic 10, cognitive 15, 60 lines. Every function is under them,
+    # so there is no baseline; a new offender fails the lint job.
+    - gocyclo
+    - gocognit
+    - funlen
+  settings:
+    gocyclo:
+      min-complexity: 10
+    gocognit:
+      min-complexity: 15
+    funlen:
+      lines: 60
+      statements: -1
+    revive:
+      rules:
+        - name: exported
+          arguments: ["checkPrivateReceivers"]
+    gosec:
+      excludes:
+        # G104 duplicates errcheck, which is already in the standard set.
+        - G104
+  exclusions:
+    rules:
+      # Tests read their own fixtures, write stand-in programs and run
+      # shells to syntax-check generated completions.
+      - path: _test\.go
+        linters: [errcheck, revive, gosec, noctx]
+
+# gofmt runs as its own CI step, but only in CI. Declaring it here too means
+# `golangci-lint run` locally reports the same formatting the gate enforces.
+formatters:
+  enable:
+    - gofmt

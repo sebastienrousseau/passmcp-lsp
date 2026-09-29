@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+cff-version: 1.2.0
+title: "passmcp-lsp: a language server for MCP artefacts"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - family-names: Rousseau
+    given-names: Sebastien
+    email: sebastian.rousseau@gmail.com
+repository-code: "https://github.com/sebastienrousseau/passmcp-lsp"
+abstract: >-
+  A Language Server Protocol server over stdio for Model Context Protocol
+  artefacts: it validates server.json registry listings against the MCP
+  Registry schema, MCP client configurations, MCP tool definitions, and
+  passmcp acceptance policies and attestations, and shows passmcp's
+  remediation guidance on hover over a check id.
+keywords:
+  - model-context-protocol
+  - mcp
+  - language-server
+  - lsp
+  - golang
+license: Apache-2.0
+version: 0.0.2
+date-released: 2026-09-29

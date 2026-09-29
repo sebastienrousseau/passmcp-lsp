@@ -1,0 +1,83 @@
+{
+  "name": "passmcp-lsp",
+  "displayName": "passmcp: MCP artefacts",
+  "description": "Diagnostics for server.json, MCP client configurations, MCP tool definitions, passmcp policies and attestations, with passmcp's guidance on hover.",
+  "version": "0.0.2",
+  "publisher": "sebastienrousseau",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebastienrousseau/passmcp-lsp",
+    "directory": "editors/vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/sebastienrousseau/passmcp-lsp/issues"
+  },
+  "homepage": "https://github.com/sebastienrousseau/passmcp-lsp#readme",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "keywords": [
+    "mcp",
+    "model context protocol",
+    "server.json",
+    "passmcp"
+  ],
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:jsonc"
+  ],
+  "main": "./out/src/extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "configuration": {
+      "title": "passmcp",
+      "properties": {
+        "passmcpLsp.path": {
+          "type": "string",
+          "default": "passmcp-lsp",
+          "scope": "machine",
+          "description": "The passmcp-lsp program: a path, or a name on PATH."
+        },
+        "passmcpLsp.passmcpPath": {
+          "type": "string",
+          "default": "",
+          "scope": "machine",
+          "description": "The passmcp program hover asks for guidance. Empty means the server's own default: passmcp on PATH."
+        },
+        "passmcpLsp.trace.server": {
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "scope": "window",
+          "description": "Trace the messages between VS Code and passmcp-lsp in the output panel."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "tsc -p . && node --test --experimental-test-coverage --test-coverage-include=out/src/settings.js --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 \"out/test/*.test.js\"",
+    "package": "tsc -p . && vsce package --out passmcp-lsp.vsix"
+  },
+  "dependencies": {
+    "vscode-languageclient": "10.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "@types/vscode": "1.91.0",
+    "@vscode/vsce": "4.0.0",
+    "typescript": "5.9.3"
+  }
+}

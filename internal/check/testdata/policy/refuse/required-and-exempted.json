@@ -1,0 +1,1 @@
+{"version": 1, "name": "x", "must_pass": ["a.b"], "exemptions": [{"check": "a.b", "reason": "r", "expires": "2099-01-01"}]}
