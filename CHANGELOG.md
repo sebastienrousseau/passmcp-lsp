@@ -10,10 +10,9 @@ All notable changes to passmcp-lsp are documented here. The format follows
 **This repository carries passmcp's version.** It is in lockstep with
 [passmcp](https://github.com/sebastienrousseau/passmcp): every repository in
 the family carries one version, and a release here with nothing in it is the
-version rule working. The release script dates the heading below when 0.0.2
-is tagged.
+version rule working.
 
-## [0.0.2] — Unreleased
+## [0.0.2] — 2026-09-29
 
 The first version. passmcp-lsp was never tagged at 0.0.1, so it first
 ships at the family's version, 0.0.2.
@@ -29,9 +28,9 @@ ships at the family's version, 0.0.2.
   Claude Code, Cursor) and VS Code's `servers` layout, with comments and
   trailing commas; a literal credential in `env` or `headers` is a warning.
 - **MCP tool definitions**, against the Tool rules of MCP 2025-11-25.
-- **passmcp policies**, with the rules passmcp 0.0.1 applies and its
+- **passmcp policies**, with the rules passmcp 0.0.2 applies and its
   reasons; a CI job holds them to passmcp's own verdicts.
-- **passmcp attestations**, verified offline by passmcp-reporting 0.0.1.
+- **passmcp attestations**, verified offline by passmcp-reporting 0.0.2.
 - **Hover on check ids** in policies and attestations, with the guidance
   the installed passmcp gives; without passmcp the hover says how to get it.
 - **`passmcp-lsp check`**, the same analysis from a terminal or CI, as text

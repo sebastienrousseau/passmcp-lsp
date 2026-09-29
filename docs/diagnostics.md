@@ -77,7 +77,7 @@ error, a SHOULD a warning.
 
 ## passmcp policies
 
-The policy format passmcp 0.0.1 reads, with the reasons passmcp gives. Every
+The policy format passmcp 0.0.2 reads, with the reasons passmcp gives. Every
 fixture in `internal/check/testdata/policy/` is applied with the released
 passmcp in CI, which must refuse exactly the ones this page calls errors.
 
@@ -100,7 +100,7 @@ Hovering a check id in `must_pass`, `must_not_fail` or an exemption's
 
 ## passmcp attestations
 
-Verified offline by passmcp-reporting 0.0.1's `attestation.Parse` (the
+Verified offline by passmcp-reporting 0.0.2's `attestation.Parse` (the
 `mcp-evaluation/v1` predicate) and `a2a.Parse` (`a2a-evaluation/v1`).
 
 | Code | Severity | When |

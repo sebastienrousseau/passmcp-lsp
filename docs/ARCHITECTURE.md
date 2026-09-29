@@ -62,6 +62,6 @@ The read loop is the only goroutine that touches documents.
 | `server.json` | The MCP Registry's published schema | Embedded byte for byte; `make schema-check` compares it with the URL |
 | Client configuration | passmcp's `internal/clientconf` and `internal/discover` at 0.0.1 | The same layouts and fields, reimplemented; see the file's comments |
 | Tool definitions | MCP specification 2025-11-25, `schema.ts` and `server/tools` | Each rule's MUST or SHOULD sets its severity |
-| Policies | passmcp 0.0.1's policy reader, documented in its manual | `make crosscheck` applies every fixture with the released passmcp |
-| Attestations | passmcp-reporting 0.0.1 | Its verifiers are called; nothing is reimplemented |
+| Policies | passmcp 0.0.2's policy reader, documented in its manual | `make crosscheck` applies every fixture with the released passmcp |
+| Attestations | passmcp-reporting 0.0.2 | Its verifiers are called; nothing is reimplemented |
 | Guidance | passmcp's catalogue | Asked of the installed passmcp at hover time |

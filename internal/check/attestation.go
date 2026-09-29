@@ -30,7 +30,7 @@ func analyzeAttestation(root *jsondoc.Node, src []byte, _ string) []Diagnostic {
 	verify, ok := verifiers[pt.Str]
 	if !ok {
 		return []Diagnostic{at(pt, Warning, "attestation/predicate-type",
-			"predicate type %q is not one passmcp-reporting 0.0.1 verifies", pt.Str)}
+			"predicate type %q is not one passmcp-reporting 0.0.2 verifies", pt.Str)}
 	}
 	err := verify(src)
 	if err == nil {

@@ -10,14 +10,14 @@ import (
 	"satellion.com/passmcp-lsp/internal/jsondoc"
 )
 
-// The rules below are the policy format passmcp v0.0.1 reads, as its
+// The rules below are the policy format passmcp v0.0.2 reads, as its
 // manual documents it (https://satellion.com/passmcp/docs/policy/): a
 // document passmcp would refuse is an error here, and the reason is the
 // one passmcp gives. passmcp remains the authority; `make crosscheck` runs
 // the released passmcp over this package's fixtures and fails when the two
 // disagree about which policies are accepted.
 
-// PolicyFormat is the policy format version passmcp v0.0.1 implements.
+// PolicyFormat is the policy format version passmcp v0.0.2 implements.
 const PolicyFormat = 1
 
 // now is the clock that decides whether an exemption has expired.
@@ -90,7 +90,7 @@ func policyVersion(v *jsondoc.Node, _ string) []Diagnostic {
 		return []Diagnostic{at(v, Error, "policy/version", "version %s is not a version", v.Raw)}
 	case f > PolicyFormat:
 		return []Diagnostic{at(v, Error, "policy/version",
-			"version %s: passmcp 0.0.1 implements policy format %d and refuses a later one rather than apply it partly", v.Raw, PolicyFormat)}
+			"version %s: passmcp 0.0.2 implements policy format %d and refuses a later one rather than apply it partly", v.Raw, PolicyFormat)}
 	}
 	return nil
 }

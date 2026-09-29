@@ -27,7 +27,7 @@ describes itself; every "yes" for passmcp-lsp names the test behind it.
   `passmcp-lsp check` against the embedded schema; both accepted the same
   three and refused the same two.
 - **Agreement with passmcp on policies.** `TestPolicyCrosscheck` applies
-  every fixture with `passmcp verify --policy`; passmcp 0.0.1 refuses
+  every fixture with `passmcp verify --policy`; passmcp 0.0.2 refuses
   exactly the 25 under `refuse/` and accepts the 5 under `accept/`.
 - **Editor schema support.** VS Code and other editors built on its JSON
   language service validate a document against the schema its `$schema`

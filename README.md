@@ -187,18 +187,18 @@ and the passmcp-reporting module in `go.mod`, agree on it.
 ## Capabilities at a glance
 
 Nothing here is released yet: 0.0.2 is the first version, and its entry is
-in the [CHANGELOG](CHANGELOG.md#002--unreleased).
+in the [CHANGELOG](CHANGELOG.md#002--2026-09-29).
 
 | Area | Capability | Status |
 | :--- | :--- | :--- |
-| Registry listings | `server.json` validated against the MCP Registry's 2025-12-11 schema, embedded and checked byte for byte against the published copy | [Not yet released](CHANGELOG.md#002--unreleased) |
-| Client configuration | `claude_desktop_config.json`, `.mcp.json`, `.cursor/mcp.json` and `.vscode/mcp.json`: entry shape, URLs, literal credentials | [Not yet released](CHANGELOG.md#002--unreleased) |
-| Tool definitions | The MCP 2025-11-25 `Tool` rules: names, `inputSchema` and `outputSchema` roots, JSON Schema types, annotation hints | [Not yet released](CHANGELOG.md#002--unreleased) |
-| passmcp policies | Every rule passmcp 0.0.1 applies when it reads a policy, held to passmcp's own verdicts by the `crosscheck` job | [Not yet released](CHANGELOG.md#002--unreleased) |
-| passmcp attestations | Structure and integrity, verified offline by passmcp-reporting 0.0.1 | [Not yet released](CHANGELOG.md#002--unreleased) |
-| Hover | passmcp's guidance for a check id in a policy or an attestation, from the installed passmcp | [Not yet released](CHANGELOG.md#002--unreleased) |
-| Terminal and CI | `passmcp-lsp check`, text or JSON, exit 1 on any error | [Not yet released](CHANGELOG.md#002--unreleased) |
-| Editors | A VS Code extension built into a `.vsix` in CI; a verified Neovim configuration | [Not yet released](CHANGELOG.md#002--unreleased) |
+| Registry listings | `server.json` validated against the MCP Registry's 2025-12-11 schema, embedded and checked byte for byte against the published copy | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| Client configuration | `claude_desktop_config.json`, `.mcp.json`, `.cursor/mcp.json` and `.vscode/mcp.json`: entry shape, URLs, literal credentials | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| Tool definitions | The MCP 2025-11-25 `Tool` rules: names, `inputSchema` and `outputSchema` roots, JSON Schema types, annotation hints | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| passmcp policies | Every rule passmcp 0.0.2 applies when it reads a policy, held to passmcp's own verdicts by the `crosscheck` job | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| passmcp attestations | Structure and integrity, verified offline by passmcp-reporting 0.0.2 | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| Hover | passmcp's guidance for a check id in a policy or an attestation, from the installed passmcp | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| Terminal and CI | `passmcp-lsp check`, text or JSON, exit 1 on any error | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| Editors | A VS Code extension built into a `.vsix` in CI; a verified Neovim configuration | [Not yet released](CHANGELOG.md#002--2026-09-29) |
 
 ---
 

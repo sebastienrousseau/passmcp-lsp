@@ -242,7 +242,7 @@ func TestPolicyFixturesAgreeWithPassmcp(t *testing.T) {
 func TestPolicyMessages(t *testing.T) {
 	for file, want := range map[string]string{
 		"unknown-key":           `"must_pas" is not a key of a policy`,
-		"later-version":         "passmcp 0.0.1 implements policy format 1",
+		"later-version":         "passmcp 0.0.2 implements policy format 1",
 		"float-version":         "version must be a whole number",
 		"no-name":               "the policy has no name",
 		"blank-name":            "the name is empty",
@@ -329,7 +329,7 @@ func TestAttestation(t *testing.T) {
 
 func TestAttestationProblems(t *testing.T) {
 	r := Analyze("a.json", []byte(`{"_type": "https://in-toto.io/Statement/v1", "predicateType": "https://satellion.com/attestation/other/v1"}`))
-	if !has(r.Diagnostics, Warning, "attestation/predicate-type", "not one passmcp-reporting 0.0.1 verifies") {
+	if !has(r.Diagnostics, Warning, "attestation/predicate-type", "not one passmcp-reporting 0.0.2 verifies") {
 		t.Fatalf("%+v", r.Diagnostics)
 	}
 	src := `{"_type": "x", "subject": [], "predicateType": "https://satellion.com/attestation/mcp-evaluation/v1", "predicate": {"ranAt": "2026-01-01T00:00:00Z"}}`
