@@ -77,7 +77,10 @@ when a packager sets it; `make uninstall` removes them. The
 [GNUmakefile](GNUmakefile) holds the contract, and CI checks the staged tree
 on every push.
 
-Once `v0.0.2` is tagged, `go install` and the release archives work too:
+The release archives are on the
+[releases page](https://github.com/sebastienrousseau/passmcp-lsp/releases).
+`go install` works once satellion.com serves this module's import path,
+which it does not yet:
 
 ```sh
 go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.2
@@ -85,9 +88,7 @@ go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.2
 
 The Release workflow builds archives for Linux, macOS and Windows on amd64
 and arm64, with a signed checksums file and SLSA build provenance, on every
-tag. 0.0.2 is not tagged yet, so the
-[releases page](https://github.com/sebastienrousseau/passmcp-lsp/releases)
-is empty until it is.
+tag.
 
 ### In VS Code
 
@@ -186,19 +187,19 @@ and the passmcp-reporting module in `go.mod`, agree on it.
 
 ## Capabilities at a glance
 
-Nothing here is released yet: 0.0.2 is the first version, and its entry is
-in the [CHANGELOG](CHANGELOG.md#002--2026-09-29).
+Everything here was first released in 0.0.2; its entry is in the
+[CHANGELOG](CHANGELOG.md#002--2026-09-29).
 
 | Area | Capability | Status |
 | :--- | :--- | :--- |
-| Registry listings | `server.json` validated against the MCP Registry's 2025-12-11 schema, embedded and checked byte for byte against the published copy | [Not yet released](CHANGELOG.md#002--2026-09-29) |
-| Client configuration | `claude_desktop_config.json`, `.mcp.json`, `.cursor/mcp.json` and `.vscode/mcp.json`: entry shape, URLs, literal credentials | [Not yet released](CHANGELOG.md#002--2026-09-29) |
-| Tool definitions | The MCP 2025-11-25 `Tool` rules: names, `inputSchema` and `outputSchema` roots, JSON Schema types, annotation hints | [Not yet released](CHANGELOG.md#002--2026-09-29) |
-| passmcp policies | Every rule passmcp 0.0.2 applies when it reads a policy, held to passmcp's own verdicts by the `crosscheck` job | [Not yet released](CHANGELOG.md#002--2026-09-29) |
-| passmcp attestations | Structure and integrity, verified offline by passmcp-reporting 0.0.2 | [Not yet released](CHANGELOG.md#002--2026-09-29) |
-| Hover | passmcp's guidance for a check id in a policy or an attestation, from the installed passmcp | [Not yet released](CHANGELOG.md#002--2026-09-29) |
-| Terminal and CI | `passmcp-lsp check`, text or JSON, exit 1 on any error | [Not yet released](CHANGELOG.md#002--2026-09-29) |
-| Editors | A VS Code extension built into a `.vsix` in CI; a verified Neovim configuration | [Not yet released](CHANGELOG.md#002--2026-09-29) |
+| Registry listings | `server.json` validated against the MCP Registry's 2025-12-11 schema, embedded and checked byte for byte against the published copy | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
+| Client configuration | `claude_desktop_config.json`, `.mcp.json`, `.cursor/mcp.json` and `.vscode/mcp.json`: entry shape, URLs, literal credentials | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
+| Tool definitions | The MCP 2025-11-25 `Tool` rules: names, `inputSchema` and `outputSchema` roots, JSON Schema types, annotation hints | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
+| passmcp policies | Every rule passmcp 0.0.2 applies when it reads a policy, held to passmcp's own verdicts by the `crosscheck` job | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
+| passmcp attestations | Structure and integrity, verified offline by passmcp-reporting 0.0.2 | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
+| Hover | passmcp's guidance for a check id in a policy or an attestation, from the installed passmcp | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
+| Terminal and CI | `passmcp-lsp check`, text or JSON, exit 1 on any error | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
+| Editors | A VS Code extension built into a `.vsix` in CI; a verified Neovim configuration | [Released in 0.0.2](https://github.com/sebastienrousseau/passmcp-lsp/releases/tag/v0.0.2) |
 
 ---
 

@@ -12,6 +12,15 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [Unreleased]
+
+### Fixed
+
+- **The README says 0.0.2 is released.** It still called every capability
+  "Not yet released" and the tag missing after 0.0.2 shipped; it also
+  said `go install` works, which it does not until satellion.com serves
+  the module's import path.
+
 ## [0.0.2] — 2026-09-29
 
 The first version. passmcp-lsp was never tagged at 0.0.1, so it first
