@@ -14,6 +14,18 @@ version rule working.
 
 ## [Unreleased]
 
+### Added
+
+- **A README demo**, rendered from `.github/demo.tape` by `make demo`: the
+  check command flagging a misspelled key in a passmcp policy, then
+  passing once it is fixed.
+
+### Changed
+
+- **Release pages are published in the family layout** by the release
+  workflow itself (Highlights, What's Changed, Checksums, Full Changelog),
+  so no page is rewritten by hand after a release.
+
 ### Fixed
 
 - **The README's install section**: it said `go install` waits on
