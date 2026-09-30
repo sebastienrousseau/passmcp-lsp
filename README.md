@@ -85,7 +85,7 @@ Or install a release with Go, or take an archive from the
 [releases page](https://github.com/sebastienrousseau/passmcp-lsp/releases):
 
 ```sh
-go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.3
+go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.4
 ```
 
 The Release workflow builds archives for Linux, macOS and Windows on amd64
@@ -162,7 +162,7 @@ the check means and how to fix it.
 
 ## The passmcp-lsp ecosystem
 
-Every component is released at **0.0.3** and moves in lockstep: one version across the family, released together ([docs/ecosystem.md](https://github.com/sebastienrousseau/passmcp/blob/main/docs/ecosystem.md)).
+Every component is released at **0.0.4** and moves in lockstep: one version across the family, released together ([docs/ecosystem.md](https://github.com/sebastienrousseau/passmcp/blob/main/docs/ecosystem.md)).
 
 | Component | Purpose | Use case |
 | :--- | :--- | :--- |

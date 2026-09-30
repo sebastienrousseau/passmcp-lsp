@@ -12,7 +12,10 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
-## [Unreleased]
+## [0.0.4] — 2026-09-30
+
+The family's fourth release. Nothing in the language server changed; the
+version moves with passmcp 0.0.4.
 
 ### Added
 
@@ -25,6 +28,9 @@ version rule working.
 - **Release pages are published in the family layout** by the release
   workflow itself (Highlights, What's Changed, Checksums, Full Changelog),
   so no page is rewritten by hand after a release.
+- **In lockstep with passmcp 0.0.4.** passmcp-lsp requires
+  passmcp-reporting v0.0.4, whose attestation API is unchanged, and its
+  policy rules and hover are cross-checked against passmcp v0.0.4.
 
 ### Fixed
 
@@ -82,5 +88,6 @@ ships at the family's version, 0.0.2.
   signed checksums and SLSA provenance; `make install` with bash, zsh and
   fish completions.
 
+[0.0.4]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/sebastienrousseau/passmcp-lsp/commits/main
