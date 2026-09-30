@@ -77,10 +77,8 @@ when a packager sets it; `make uninstall` removes them. The
 [GNUmakefile](GNUmakefile) holds the contract, and CI checks the staged tree
 on every push.
 
-The release archives are on the
-[releases page](https://github.com/sebastienrousseau/passmcp-lsp/releases).
-`go install` works once satellion.com serves this module's import path,
-which it does not yet:
+Or install a release with Go, or take an archive from the
+[releases page](https://github.com/sebastienrousseau/passmcp-lsp/releases):
 
 ```sh
 go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.3

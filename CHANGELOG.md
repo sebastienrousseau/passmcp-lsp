@@ -12,6 +12,15 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [Unreleased]
+
+### Fixed
+
+- **The README's install section**: it said `go install` waits on
+  satellion.com serving the module's import path. The site has served it
+  since its 0.0.3 deploy, and `go install
+  satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.3` works.
+
 ## [0.0.3] — 2026-09-30
 
 The family's third release. Nothing in the language server changed; the
