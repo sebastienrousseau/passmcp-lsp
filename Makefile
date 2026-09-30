@@ -3,7 +3,7 @@
 
 .PHONY: all build test test-race coverage coverage-json vet lint format spdx-check smoke fuzz \
         crosscheck schema-check completions vscode readme-check name-guard lockstep family \
-        versions docs help
+        versions docs help demo
 
 # Every gate CI runs that needs no network, in the order the cheap ones fail
 # first.
@@ -110,7 +110,15 @@ versions:
 docs:
 	mkdocs build --strict --site-dir public
 
+# The README demo (.github/demo.gif), rendered by VHS from .github/demo.tape:
+# the Quick Start's misspelled policy flagged, then corrected. It runs in
+# build/demo/work, which is git-ignored. Needs vhs, ttyd and ffmpeg.
+demo: build
+	rm -rf build/demo && mkdir -p build/demo/work
+	PATH="$(CURDIR)/build:$$PATH" vhs .github/demo.tape
+
 help:
 	@printf '%s\n' "targets: all build test test-race coverage coverage-json vet lint format spdx-check smoke fuzz" \
 	  "         crosscheck schema-check completions vscode readme-check name-guard lockstep family versions docs" \
+	  "         demo" \
 	  "GNUmakefile: install uninstall install-smoke (PREFIX, DESTDIR)"

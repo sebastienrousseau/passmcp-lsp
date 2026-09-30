@@ -14,7 +14,7 @@ file.
 |---|---|---|
 | Go | 1.26.8 or later, the `go` directive in `go.mod` | `GOTOOLCHAIN=auto` downloads it; CI tests on that version and on latest stable |
 | make | any | Task runner for everything below |
-| passmcp | the version in `CHANGELOG.md` | hover, and `make crosscheck`; `go install satellion.com/passmcp/cmd/passmcp@v0.0.3` |
+| passmcp | the version in `CHANGELOG.md` | hover, and `make crosscheck`; `go install satellion.com/passmcp/cmd/passmcp@v0.0.4` |
 | Node | 22 or later | only for `make vscode`, the VS Code extension |
 
 Optional, only for the gate that uses it: `golangci-lint` (`make lint`),
@@ -127,7 +127,13 @@ anything is missing or left behind.
 
 ## Generated artefacts
 
-None are committed. Release archives and checksums are built by goreleaser
+One is committed: the README demo, `.github/demo.gif`, because GitHub renders
+it from the tree. Regenerate it with `make demo` whenever what `check`
+prints for the Quick Start changes; it builds the binary and records
+`.github/demo.tape` with [VHS](https://github.com/charmbracelet/vhs)
+(`vhs`, `ttyd` and `ffmpeg` on `PATH`) in a scratch directory under `build/`.
+
+Nothing else is. Release archives and checksums are built by goreleaser
 into `dist/`; `make build`, `make completions`, `make coverage-json` and
 `make schema-check` write to `build/`; `make vscode` writes
 `editors/vscode/out/` and `editors/vscode/passmcp-lsp.vsix`. All are
@@ -139,19 +145,36 @@ The version is passmcp's latest release, exactly, and a release is cut
 after passmcp's, on a `feat/vX.Y.Z` branch:
 
 1. Date the `## [X.Y.Z]` heading in `CHANGELOG.md`, write
-   `docs/releases/vX.Y.Z.md`, and update the version in the install lines,
+   `docs/releases/vX.Y.Z.md` (the release page's highlights), and update the version in the install lines,
    the README's ecosystem sentence, `CITATION.cff` (`version`, and add
    `date-released`), and `editors/vscode/package.json` (then
    `npm install --package-lock-only` to move the lock). Move `go.mod` to
    passmcp-reporting's `vX.Y.Z`.
 2. `make lockstep` and `make versions`.
-3. `goreleaser check`, and the Release workflow's dry run.
+3. `goreleaser check`, and the Release workflow's dry run, which also
+   prints the release page.
 4. Push a signed annotated tag `vX.Y.Z` with the message
    `passmcp-lsp vX.Y.Z`. The Release workflow builds the archives and the
-   `.vsix`, signs the checksums, and attests them.
+   `.vsix`, signs the checksums, attests them, and publishes the release
+   page.
 5. Read the tag, the release page and the checksums back before calling it
    done. Publishing the extension to a marketplace is a separate, manual
    step.
+
+The release page is composed, never edited by hand. The Release
+workflow's last step runs `scripts/releasepage`, which titles the page
+`passmcp-lsp X.Y.Z` and writes the highlights from `docs/releases/vX.Y.Z.md`,
+GitHub's generated `## What's Changed` (and `## New Contributors` when
+there are any), the SHA-256 of every attached asset under `## Checksums`,
+and the `**Full Changelog**` link, then reads the page back and fails
+unless GitHub shows what it composed. The dry run prints the same page for
+its snapshot artefacts. To see the page a tag has, or would have, without
+publishing anything (`gh` needs a token with contents access for GitHub's
+generated notes):
+
+```sh
+go run ./scripts/releasepage -name passmcp-lsp -tag vX.Y.Z
+```
 
 ## Conventions
 

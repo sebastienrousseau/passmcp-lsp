@@ -21,6 +21,10 @@
   <a href="https://github.com/sebastienrousseau/passmcp-lsp/blob/main/DEVELOPMENT.md#requirements"><img src="https://img.shields.io/badge/go-1.26.8%2B-93450a.svg?style=for-the-badge&logo=go" alt="Go 1.26.8+" /></a>
 </p>
 
+<p align="center">
+  <img src=".github/demo.gif" alt="passmcp-lsp check flagging a policy whose must_pass rule is misspelled must_pas, then reporting it ok once the key is corrected" width="100%" />
+</p>
+
 ---
 
 ## Contents
@@ -77,13 +81,11 @@ when a packager sets it; `make uninstall` removes them. The
 [GNUmakefile](GNUmakefile) holds the contract, and CI checks the staged tree
 on every push.
 
-The release archives are on the
-[releases page](https://github.com/sebastienrousseau/passmcp-lsp/releases).
-`go install` works once satellion.com serves this module's import path,
-which it does not yet:
+Or install a release with Go, or take an archive from the
+[releases page](https://github.com/sebastienrousseau/passmcp-lsp/releases):
 
 ```sh
-go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.3
+go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.4
 ```
 
 The Release workflow builds archives for Linux, macOS and Windows on amd64
@@ -160,7 +162,7 @@ the check means and how to fix it.
 
 ## The passmcp-lsp ecosystem
 
-Every component is released at **0.0.3** and moves in lockstep: one version across the family, released together ([docs/ecosystem.md](https://github.com/sebastienrousseau/passmcp/blob/main/docs/ecosystem.md)).
+Every component is released at **0.0.4** and moves in lockstep: one version across the family, released together ([docs/ecosystem.md](https://github.com/sebastienrousseau/passmcp/blob/main/docs/ecosystem.md)).
 
 | Component | Purpose | Use case |
 | :--- | :--- | :--- |

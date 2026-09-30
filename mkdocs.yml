@@ -4,6 +4,7 @@
 site_name: passmcp-lsp
 site_description: A language server for MCP artefacts, with passmcp's guidance on hover.
 site_url: https://sebastienrousseau.com/passmcp-lsp/
+copyright: '&copy; 2026 <a href="https://sebastienrousseau.com/" rel="author">Sebastien Rousseau</a>'
 repo_url: https://github.com/sebastienrousseau/passmcp-lsp
 repo_name: sebastienrousseau/passmcp-lsp
 edit_uri: edit/main/docs/
