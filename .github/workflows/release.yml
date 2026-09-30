@@ -172,4 +172,4 @@ jobs:
         if: env.DRY_RUN != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: go run ./scripts/releasepage -name passmcp-lsp -tag "${GITHUB_REF_passmcp-lsp}" -publish
+        run: go run ./scripts/releasepage -name passmcp-lsp -tag "${GITHUB_REF_NAME}" -publish
