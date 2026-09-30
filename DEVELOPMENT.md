@@ -14,7 +14,7 @@ file.
 |---|---|---|
 | Go | 1.26.8 or later, the `go` directive in `go.mod` | `GOTOOLCHAIN=auto` downloads it; CI tests on that version and on latest stable |
 | make | any | Task runner for everything below |
-| passmcp | the version in `CHANGELOG.md` | hover, and `make crosscheck`; `go install satellion.com/passmcp/cmd/passmcp@v0.0.2` |
+| passmcp | the version in `CHANGELOG.md` | hover, and `make crosscheck`; `go install satellion.com/passmcp/cmd/passmcp@v0.0.3` |
 | Node | 22 or later | only for `make vscode`, the VS Code extension |
 
 Optional, only for the gate that uses it: `golangci-lint` (`make lint`),

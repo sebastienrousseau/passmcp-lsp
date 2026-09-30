@@ -2,7 +2,7 @@
   "name": "passmcp-lsp",
   "displayName": "passmcp: MCP artefacts",
   "description": "Diagnostics for server.json, MCP client configurations, MCP tool definitions, passmcp policies and attestations, with passmcp's guidance on hover.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "sebastienrousseau",
   "license": "Apache-2.0",
   "repository": {

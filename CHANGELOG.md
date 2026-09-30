@@ -12,7 +12,7 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
-## [0.0.3]
+## [0.0.3] — 2026-09-30
 
 The family's third release. Nothing in the language server changed; the
 version moves with passmcp, whose family manifest now lists passmcp-lsp
