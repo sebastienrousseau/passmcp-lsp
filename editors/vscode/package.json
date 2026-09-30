@@ -2,7 +2,7 @@
   "name": "passmcp-lsp",
   "displayName": "passmcp: MCP artefacts",
   "description": "Diagnostics for server.json, MCP client configurations, MCP tool definitions, passmcp policies and attestations, with passmcp's guidance on hover.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "sebastienrousseau",
   "license": "Apache-2.0",
   "repository": {
@@ -75,9 +75,9 @@
     "vscode-languageclient": "10.1.2"
   },
   "devDependencies": {
-    "@types/node": "22.20.4",
+    "@types/node": "26.6.3",
     "@types/vscode": "1.91.0",
     "@vscode/vsce": "4.0.0",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   }
 }
