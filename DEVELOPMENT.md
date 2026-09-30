@@ -127,7 +127,13 @@ anything is missing or left behind.
 
 ## Generated artefacts
 
-None are committed. Release archives and checksums are built by goreleaser
+One is committed: the README demo, `.github/demo.gif`, because GitHub renders
+it from the tree. Regenerate it with `make demo` whenever what `check`
+prints for the Quick Start changes; it builds the binary and records
+`.github/demo.tape` with [VHS](https://github.com/charmbracelet/vhs)
+(`vhs`, `ttyd` and `ffmpeg` on `PATH`) in a scratch directory under `build/`.
+
+Nothing else is. Release archives and checksums are built by goreleaser
 into `dist/`; `make build`, `make completions`, `make coverage-json` and
 `make schema-check` write to `build/`; `make vscode` writes
 `editors/vscode/out/` and `editors/vscode/passmcp-lsp.vsix`. All are
