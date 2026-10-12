@@ -12,6 +12,14 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [0.0.5] - 2026-10-12
+
+### Changed
+
+- **In lockstep with passmcp 0.0.5**: passmcp-reporting is required at
+  v0.0.5, and crosschecks run against passmcp v0.0.5.
+- **Bump `@types/node` and `@types/vscode`** in `/editors/vscode`.
+
 ## [0.0.4] — 2026-09-30
 
 The family's fourth release. Nothing in the language server changed; the

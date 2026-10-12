@@ -23,7 +23,7 @@ Install it from the
 or with Go:
 
 ```sh
-go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.4
+go install satellion.com/passmcp-lsp/cmd/passmcp-lsp@v0.0.5
 ```
 
 Hover guidance needs [passmcp](https://github.com/sebastienrousseau/passmcp)
