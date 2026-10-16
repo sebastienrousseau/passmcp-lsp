@@ -12,6 +12,30 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [Unreleased]
+
+passmcp-lsp did not ship a 0.0.6, so its next release moves from 0.0.5
+to the family's 0.0.7. The language server's own code is unchanged.
+
+### Changed
+
+- **Bump `@types/node` to 26.6.5** in `/editors/vscode`
+  ([#9](https://github.com/sebastienrousseau/passmcp-lsp/pull/9)).
+  `@types/vscode` stays at 1.91, the oldest VS Code the extension
+  supports, so `vsce` still packages it, and Dependabot no longer
+  proposes minor or major updates of it.
+- **Bump the GitHub Actions group**: `actions/setup-node` 7.1.0,
+  `actions/upload-artifact` 7.0.2, `github/codeql-action` 4.38.3 and
+  `ossf/scorecard-action` 2.5.0
+  ([#10](https://github.com/sebastienrousseau/passmcp-lsp/pull/10)).
+
+### Fixed
+
+- **`make lockstep` explains a CHANGELOG with no version heading**
+  instead of failing without a message.
+- **The 0.0.5 release highlights** said `@types/vscode` moved to
+  1.140.0. It stayed at 1.91.0 in that release, and still does.
+
 ## [0.0.5] - 2026-10-12
 
 ### Changed
