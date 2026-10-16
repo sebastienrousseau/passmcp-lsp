@@ -12,6 +12,40 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [0.0.7] - 2026-10-17
+
+passmcp-lsp did not ship a 0.0.6, so its next release moves from 0.0.5
+to the family's 0.0.7. The language server's own code is unchanged.
+
+### Changed
+
+- **In lockstep with passmcp 0.0.7**: passmcp-reporting is required at
+  v0.0.7, and crosschecks run against passmcp v0.0.7.
+- **Bump `@types/node` to 26.6.5** in `/editors/vscode`
+  ([#9](https://github.com/sebastienrousseau/passmcp-lsp/pull/9)).
+  `@types/vscode` stays at 1.91, the oldest VS Code the extension
+  supports, so `vsce` still packages it, and Dependabot no longer
+  proposes minor or major updates of it.
+- **Bump the GitHub Actions group**: `actions/setup-node` 7.1.0,
+  `actions/upload-artifact` 7.0.2, `github/codeql-action` 4.38.3 and
+  `ossf/scorecard-action` 2.5.0
+  ([#10](https://github.com/sebastienrousseau/passmcp-lsp/pull/10)).
+
+### Fixed
+
+- **`make lockstep` explains a CHANGELOG with no version heading**
+  instead of failing without a message.
+- **The 0.0.5 release highlights** said `@types/vscode` moved to
+  1.140.0. It stayed at 1.91.0 in that release, and still does.
+
+### Security
+
+- **Require Go 1.26.9.** The release binaries are built with the
+  toolchain `go.mod` names, and 1.26.8's standard library carries
+  GO-2026-6599 to GO-2026-6617, all fixed in 1.26.9. govulncheck found
+  none of them reachable from this code, but the binaries would still
+  ship the affected packages. The family moves to one toolchain.
+
 ## [0.0.5] - 2026-10-12
 
 ### Changed
@@ -96,6 +130,8 @@ ships at the family's version, 0.0.2.
   signed checksums and SLSA provenance; `make install` with bash, zsh and
   fish completions.
 
+[0.0.7]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.5...v0.0.7
+[0.0.5]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/sebastienrousseau/passmcp-lsp/commits/main

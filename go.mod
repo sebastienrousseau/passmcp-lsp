@@ -1,5 +1,5 @@
 module satellion.com/passmcp-lsp
 
-go 1.26.8
+go 1.26.9
 
-require satellion.com/passmcp-reporting v0.0.5
+require satellion.com/passmcp-reporting v0.0.7

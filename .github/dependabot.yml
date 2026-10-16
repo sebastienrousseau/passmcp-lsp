@@ -22,6 +22,12 @@ updates:
       vscode-extension:
         patterns:
           - "*"
+    # @types/vscode is held at the engines.vscode floor in package.json:
+    # vsce refuses to package types newer than the oldest VS Code the
+    # extension supports. It moves with engines.vscode, by hand.
+    ignore:
+      - dependency-name: "@types/vscode"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
