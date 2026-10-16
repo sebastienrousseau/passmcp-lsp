@@ -18,7 +18,7 @@
   <a href="https://pkg.go.dev/satellion.com/passmcp-lsp"><img src="https://img.shields.io/badge/go.dev-reference-007d9c?style=for-the-badge&labelColor=555555&logo=go&logoColor=white" alt="Docs" /></a>
   <a href="https://scorecard.dev/viewer/?uri=github.com/sebastienrousseau/passmcp-lsp"><img src="https://img.shields.io/ossf-scorecard/github.com/sebastienrousseau/passmcp-lsp?style=for-the-badge&label=OpenSSF%20Scorecard&logo=openssf" alt="OpenSSF Scorecard" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg?style=for-the-badge" alt="License: Apache-2.0" /></a>
-  <a href="https://github.com/sebastienrousseau/passmcp-lsp/blob/main/DEVELOPMENT.md#requirements"><img src="https://img.shields.io/badge/go-1.26.8%2B-93450a.svg?style=for-the-badge&logo=go" alt="Go 1.26.8+" /></a>
+  <a href="https://github.com/sebastienrousseau/passmcp-lsp/blob/main/DEVELOPMENT.md#requirements"><img src="https://img.shields.io/badge/go-1.26.9%2B-93450a.svg?style=for-the-badge&logo=go" alt="Go 1.26.9+" /></a>
 </p>
 
 <p align="center">
@@ -130,7 +130,7 @@ the command is `passmcp-lsp`, for JSON and JSON-with-comments files.
 
 | Requirement | Floor | Enforced by |
 |---|---|---|
-| Go (building from source) | the `go` directive in [`go.mod`](go.mod), 1.26.8 | CI tests on that version and on latest stable, on Linux, macOS and Windows |
+| Go (building from source) | the `go` directive in [`go.mod`](go.mod), 1.26.9 | CI tests on that version and on latest stable, on Linux, macOS and Windows |
 | passmcp (hover guidance only) | the version this repository is in lockstep with, on `PATH` or named with `--passmcp` | the `crosscheck` job asks passmcp at that tag for guidance, and for its verdict on every policy fixture |
 | An editor | any that starts a stdio language server and sends whole or incremental text changes | the protocol tests in `internal/lsp` and `make smoke` |
 | Node (building the VS Code extension only) | 22 | the `vscode` job builds and tests the extension on Node 22 |

@@ -36,6 +36,14 @@ to the family's 0.0.7. The language server's own code is unchanged.
 - **The 0.0.5 release highlights** said `@types/vscode` moved to
   1.140.0. It stayed at 1.91.0 in that release, and still does.
 
+### Security
+
+- **Require Go 1.26.9.** The release binaries are built with the
+  toolchain `go.mod` names, and 1.26.8's standard library carries
+  GO-2026-6599 to GO-2026-6617, all fixed in 1.26.9. govulncheck found
+  none of them reachable from this code, but the binaries would still
+  ship the affected packages. The family moves to one toolchain.
+
 ## [0.0.5] - 2026-10-12
 
 ### Changed
