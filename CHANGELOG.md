@@ -12,6 +12,14 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [Unreleased]
+
+### Changed
+
+- **The release workflow runs `goreleaser/goreleaser-action` 7.3.0**
+  (from 7.2.3), pinned by commit
+  ([#12](https://github.com/sebastienrousseau/passmcp-lsp/pull/12)).
+
 ## [0.0.7] - 2026-10-17
 
 passmcp-lsp did not ship a 0.0.6, so its next release moves from 0.0.5
