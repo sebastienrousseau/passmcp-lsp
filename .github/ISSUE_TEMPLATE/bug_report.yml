@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+name: Bug report
+description: A diagnostic, hover or the check subcommand is wrong, or the server misbehaves.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: >
+        If the bug lets a file you open run a program, reach the network or
+        read outside the workspace, **stop** and report it through
+        [GitHub's private vulnerability reporting](https://github.com/sebastienrousseau/passmcp-lsp/security/advisories/new)
+        instead. See [SECURITY.md](https://github.com/sebastienrousseau/passmcp-lsp/blob/main/SECURITY.md).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The diagnostic you got or expected, with its code, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: The smallest file that shows it
+      description: Remove anything private; a few lines is usually enough.
+      render: json
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versions
+      description: "`passmcp-lsp --version`, and the editor and its version."
+    validations:
+      required: true
