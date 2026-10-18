@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+blank_issues_enabled: true
+contact_links:
+  - name: Report a vulnerability in passmcp-lsp
+    url: https://github.com/sebastienrousseau/passmcp-lsp/security/advisories/new
+    about: Privately, per SECURITY.md.
+  - name: A passmcp check or its guidance looks wrong
+    url: https://github.com/sebastienrousseau/passmcp/issues
+    about: The server shows passmcp's verdicts and guidance unchanged; a wrong check is passmcp's to fix.

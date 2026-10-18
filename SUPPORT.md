@@ -14,20 +14,22 @@ Where to take a question, in the order most likely to get you an answer.
 | What a passmcp check means and how to fix it | the hover, or [passmcp's manual](https://satellion.com/passmcp/docs/) |
 | Contributing and toolchain | [DEVELOPMENT.md](DEVELOPMENT.md) |
 
-## Questions and discussion
+## Questions
 
-[GitHub Discussions](https://github.com/sebastienrousseau/passmcp-lsp/discussions)
-for "how do I" and anything open-ended. A question about a passmcp check
-itself belongs in
-[passmcp's discussions](https://github.com/sebastienrousseau/passmcp/discussions),
+Open a [GitHub issue](https://github.com/sebastienrousseau/passmcp-lsp/issues)
+for "how do I" and anything open-ended; a blank issue is fine when no
+template fits. The repository has no Discussions.
+A question about a passmcp check itself belongs in
+[passmcp's issues](https://github.com/sebastienrousseau/passmcp/issues),
 because this server only shows what passmcp says.
 
 ## Bugs and feature requests
 
 [GitHub Issues](https://github.com/sebastienrousseau/passmcp-lsp/issues),
-using the templates. A good report includes `passmcp-lsp --version`, the
-editor and its version, the smallest file that shows the problem, and the
-diagnostic you got or expected, with its code.
+using the bug report or feature request template. A good report includes
+`passmcp-lsp --version`, the editor and its version, the smallest file
+that shows the problem, and the diagnostic you got or expected, with its
+code.
 
 ## Security
 
