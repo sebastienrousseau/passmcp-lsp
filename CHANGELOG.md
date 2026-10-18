@@ -12,10 +12,18 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
-## [Unreleased]
+## [0.0.8] - 2026-10-18
+
+In lockstep with passmcp 0.0.8. The language server's own code, its
+diagnostics and the VS Code extension's behaviour are unchanged from
+0.0.7.
 
 ### Changed
 
+- **In lockstep with passmcp 0.0.8**: passmcp-reporting is required at
+  v0.0.8, whose `attestation` and `a2a` verifiers are unchanged from
+  v0.0.7, and crosschecks run against passmcp v0.0.8. The VS Code
+  extension's version moves to 0.0.8.
 - **The release workflow runs `goreleaser/goreleaser-action` 7.3.0**
   (from 7.2.3), pinned by commit
   ([#12](https://github.com/sebastienrousseau/passmcp-lsp/pull/12)).
@@ -146,6 +154,7 @@ ships at the family's version, 0.0.2.
   signed checksums and SLSA provenance; `make install` with bash, zsh and
   fish completions.
 
+[0.0.8]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.5...v0.0.7
 [0.0.5]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.3...v0.0.4
