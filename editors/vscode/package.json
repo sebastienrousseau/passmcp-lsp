@@ -79,5 +79,8 @@
     "@types/vscode": "1.91.0",
     "@vscode/vsce": "4.0.0",
     "typescript": "7.0.2"
+  },
+  "overrides": {
+    "@azure/msal-node": "7.1.0"
   }
 }
