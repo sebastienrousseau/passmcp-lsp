@@ -12,6 +12,41 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [0.0.9] - 2026-11-12
+
+In lockstep with passmcp 0.0.9. The language server's own code and its
+diagnostics are unchanged from 0.0.8; the VS Code extension updates its
+dependencies and floors transitive advisories.
+
+### Changed
+
+- **In lockstep with passmcp 0.0.9**: passmcp-reporting is required at
+  v0.0.9, whose `attestation` and `a2a` verifiers are unchanged from
+  v0.0.8, and crosschecks run against passmcp v0.0.9 (hover guidance for
+  new checks such as `protocol.unknown_resource` comes directly from
+  `passmcp explain`). The VS Code extension's version moves to 0.0.9.
+- **Upgrade the VS Code extension dependencies** in `/editors/vscode`:
+  `vscode-languageclient` 11.0.0, `@vscode/vsce` 4.1.0 and `@types/node`
+  26.6.6 ([#20](https://github.com/sebastienrousseau/passmcp-lsp/pull/20)).
+- **GitHub Actions updated**: `github/codeql-action` 4.39.3,
+  `sigstore/cosign-installer` 4.1.3, `DavidAnson/markdownlint-cli2-action`
+  25.0.0 and `actions/setup-python` 7.1.0
+  ([#15](https://github.com/sebastienrousseau/passmcp-lsp/pull/15),
+  [#21](https://github.com/sebastienrousseau/passmcp-lsp/pull/21),
+  [#25](https://github.com/sebastienrousseau/passmcp-lsp/pull/25)).
+
+### Security
+
+- **Floor `minimatch`, `qs` and `@azure/msal-node` in `/editors/vscode`.**
+  `overrides` pins `@azure/msal-node` 7.1.0 (GHSA-xcx6-jx8p-x3h5,
+  [#17](https://github.com/sebastienrousseau/passmcp-lsp/pull/17)),
+  `minimatch` `^11.0.1` resolving 11.0.4 (GHSA-g3hv-75wg-m249) and `qs`
+  `^6.16.1` resolving 6.17.1 (GHSA-6pq8-jhm2-2vcw,
+  [#24](https://github.com/sebastienrousseau/passmcp-lsp/pull/24)).
+- **Bump `certifi` to 2026.10.19 in `/docs`** (PYSEC-2026-4320,
+  GHSA-6q48-6c7w-9gw2,
+  [#16](https://github.com/sebastienrousseau/passmcp-lsp/pull/16)).
+
 ## [0.0.8] - 2026-10-18
 
 In lockstep with passmcp 0.0.8. The language server's own code, its
@@ -154,6 +189,7 @@ ships at the family's version, 0.0.2.
   signed checksums and SLSA provenance; `make install` with bash, zsh and
   fish completions.
 
+[0.0.9]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.5...v0.0.7
 [0.0.5]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.4...v0.0.5
