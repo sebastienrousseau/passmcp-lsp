@@ -23,5 +23,5 @@ keywords:
   - lsp
   - golang
 license: Apache-2.0
-version: 0.0.9
-date-released: 2026-11-12
+version: 0.0.10
+date-released: 2026-11-13
