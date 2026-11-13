@@ -12,6 +12,23 @@ All notable changes to passmcp-lsp are documented here. The format follows
 the family carries one version, and a release here with nothing in it is the
 version rule working.
 
+## [0.0.10] - 2026-11-13
+
+In lockstep with passmcp 0.0.10, which brings the six Apache-2.0 MCP
+language SDKs into the 15-repository lockstep stream. The language server's
+own code, its diagnostics and the VS Code extension's behaviour are
+unchanged from 0.0.9.
+
+### Changed
+
+- **In lockstep with passmcp 0.0.10**: passmcp-reporting is required at
+  v0.0.10, whose `attestation` and `a2a` verifiers are unchanged from
+  v0.0.9, and crosschecks run against passmcp v0.0.10. The VS Code
+  extension's version moves to 0.0.10.
+- **README family table lists all 15 lockstep repositories** at `0.0.10`,
+  adding `passmcp-sdk-go`, `passmcp-sdk-python`, `passmcp-sdk-java`,
+  `passmcp-sdk-cpp`, `passmcp-sdk-typescript`, and `passmcp-sdk-rust`.
+
 ## [0.0.9] - 2026-11-12
 
 In lockstep with passmcp 0.0.9. The language server's own code and its
@@ -189,6 +206,7 @@ ships at the family's version, 0.0.2.
   signed checksums and SLSA provenance; `make install` with bash, zsh and
   fish completions.
 
+[0.0.10]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/sebastienrousseau/passmcp-lsp/compare/v0.0.5...v0.0.7
